@@ -9,7 +9,7 @@ import org.springframework.modulith.docs.Documenter;
 class SmartparkingSystemApplicationTests {
 
 	@Test
-	void contextLoads() {
+	void validateModularity() {
 		ApplicationModules modules = ApplicationModules.of(SmartparkingSystemApplication.class)
 				.verify();
 		new Documenter(modules).writeDocumentation();

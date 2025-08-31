@@ -40,5 +40,9 @@ public class SlotAllocationService {
                 });
     }
 
+    public Slot getNextAvailableSlot(){
+        return slotRepository.findFirstByAvailableTrue().orElseThrow(() -> new RuntimeException("No Parking slot available!"));
+    }
+
 
 }
